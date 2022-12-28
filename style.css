@@ -1,0 +1,83 @@
+body{
+    margin: 0;
+    background-image: url("jj-ying-7JX0-bfiuxQ-unsplash.jpg");
+    background-size: cover;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    background-color: rgb(40, 141, 141);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    padding: 3rem;
+}
+
+form{
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 3rem;
+    column-gap: 7rem;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    margin: 1rem;
+}
+
+.pwd{
+    background-color: #fff;
+    color: rgb(73, 73, 73);
+    padding: 1rem;
+    width: 450px;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    word-break: break-all;
+}
+
+#G-btn{
+    grid-column: span 2;
+    height: 3rem;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    color: white;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: large;
+    padding: .5rem 1rem;
+    cursor: pointer;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+}
+
+label{
+    font-weight: bold;
+}
+
+.characterAmountContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.width{
+    width: 2rem;
+}
+
+#G-btn:hover{
+    background-color: rgba(255, 255, 255, 0.315);
+}
