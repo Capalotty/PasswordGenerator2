@@ -1,7 +1,6 @@
 const characterAmountRange = document.getElementById("characterAmountRange")
 const characterAmountNumber = document.getElementById("characterAmountNumber")
 const includeUpperCaseElement = document.getElementById("includeUpperCase")
-// const includeUppercaseElement = document.getElementById('includeUpperCase')
 const includeNumbersElement = document.getElementById("includeNumbers")
 const includeSymbolsElement = document.getElementById("includeSymbols")
 const form = document.getElementById("passwordGeneratorForm")
