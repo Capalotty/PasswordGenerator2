@@ -23,7 +23,7 @@ characterAmountRange.addEventListener('input', syncCharacterAmount)
 
 form.addEventListener('submit', e => {
     e.preventDefault()
-    const characterAmount = characterAmountRange.value;
+    const characterAmount = characterAmountNumber.value;
     const includeUpperCase = includeUpperCaseElement.checked; 
     const includeNumbers = includeNumbersElement.checked;
     const includeSymbols = includeSymbolsElement.checked;
@@ -36,15 +36,15 @@ function generatePassword(characterAmount, includeUpperCase, includeNumbers, inc
     let charCodes = lowerCharCode
     if(includeUpperCase){
         charCodes.concat(UpperCharCode)
-    }if(includeNumbers){
+    }else if(includeNumbers){
         charCodes.concat(NumberCharCode)
-    }if(includeSymbols){
+    }else if(includeSymbols){
         charCodes.concat(SymbolsCharCode)
     }
 
     let passwordCharacter = []
     for(let i = 0; i < characterAmount; i++){
-        let characterCode = charCodes[Math.floor(Math.random() * characterAmount)]
+        let characterCode = charCodes[Math.floor(Math.random() * charCodes.length)]
         passwordCharacter.push(String.fromCharCode(characterCode))
     }
     return passwordCharacter.join('')
@@ -52,7 +52,7 @@ function generatePassword(characterAmount, includeUpperCase, includeNumbers, inc
 
 function arrayFromLowToHigh(low, high){
     const array = []
-    for(let i = low; i < high; i++){
+    for(let i = low; i <= high; i++){
         array.push(i)
     }
     return array
