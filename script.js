@@ -34,10 +34,13 @@ form.addEventListener('submit', e => {
 
 function generatePassword(characterAmount, includeUpperCase, includeNumbers, includeSymbols){
     let charCodes = lowerCharCode
-    if(includeUpperCase) charCodes = charCodes.concat(UpperCharCode)
-    if(includeNumbers) charCodes = charCodes.concat(NumberCharCode)
-    if(includeSymbols) charCodes = charCodes.concat(SymbolsCharCode)
-
+    if(includeUpperCase){
+        charCodes = charCodes.concat(UpperCharCode)
+    }if (includeNumbers){
+        charCodes = charCodes.concat(NumberCharCode)
+    }if (includeSymbols){
+        charCodes = charCodes.concat(SymbolsCharCode)
+    }
 
     const passwordCharacter = []
     for(let i = 0; i < characterAmount; i++){
